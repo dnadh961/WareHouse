@@ -9,7 +9,7 @@ import com.cpwh.SUT;
 public class BasketPage extends BasePage{
 	
 	public enum MonthlyCap {
-		GBP_10("BC010"), GBP_40("BC040"), GBP_50("BC050"), NO_BILL_CAP("BCOFF");
+		GBP_10("BC010"), GBP_20("BC020"), GBP_40("BC040"), GBP_50("BC050"), NO_BILL_CAP("BCOFF");
 		
 		private String cost;
 		

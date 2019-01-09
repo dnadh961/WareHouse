@@ -25,6 +25,7 @@ public class PhoneFilters extends CommonFilters{
 	}
 	
 	public void selectBrand(Brands brand){
+		sut.handleWaits().waitForElementClickable(By.xpath("//label[@for='"+brand.getValue()+"']"));
 		findElement(By.xpath("//label[@for='"+brand.getValue()+"']")).click();
 	}
 

@@ -79,6 +79,7 @@ public class ValidateBasket {
 	
 	@When("^selects first phone in the search results$")
 	public void selects_first_phone_in_search_results() {
+		sut.handleWaits().sleep(5);
 		devicePage = phonesPage.selectFirst();
 	}
 	
