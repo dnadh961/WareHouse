@@ -3,6 +3,8 @@ package com.cpwh.test;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.cpwh.Browser;
 import com.cpwh.SUT;
@@ -38,6 +40,8 @@ public class ValidateBasket {
 	private DealsFilters dealsFilters = null;
 	private BasketPage basketPage = null;
 	private CheckoutPage checkoutPage = null;
+	
+	private Logger logger = LoggerFactory.getLogger(ValidateBasket.class);
 	
 	@Before("@TC-100")
 	public void setUp(Scenario scenario){
@@ -96,6 +100,7 @@ public class ValidateBasket {
 
 	@When("^selects Network as \"([^\"]*)\"$")
 	public void selects_Network_as(String network) {
+		sut.handleWaits().sleep(5);
 		dealsFilters.selectNetwork(Networks.valueOf(network));
 	}
 
@@ -106,7 +111,11 @@ public class ValidateBasket {
 
 	@When("^adds first accessory to basket from Choose your Extras$")
 	public void adds_first_accessory_to_basket_from_Choose_your_Extras() {
-	    dealsPage.addFirstAccessoryToBasket();
+		try{
+			dealsPage.addFirstAccessoryToBasket();
+		} catch(Exception e) {
+			logger.warn("Additional accessories are not there for current device");
+		}
 	}
 
 	@When("^clicks on Continue to bakset$")

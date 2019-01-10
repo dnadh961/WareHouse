@@ -1,4 +1,4 @@
-@login
+@basket
 Feature: Basket
 
   @TC-100
@@ -25,6 +25,6 @@ Feature: Basket
     
   Examples:
   	| Brand   | Upfront Cost | Monthly Cost | Network  | Monthly Cap | Email         | Title | FirstName | LastName | Contact    | Marital Status | Pincode |
-  	| Apple   | GBP_20       | GBP_100      | VODAFONE | GBP_20      | abc@gmail.com | Mr    | Dev       | Nadh     | 9052557770 | Single         | 500049  |
-  	| Samsung | GBP_20       | GBP_50       | VODAFONE | GBP_50      | abc@gmail.com | Mr    | Dev       | Nadh     | 9100826115 | Single         | 500049  |
+  	| Apple   | GBP_20       | GBP_100      | VODAFONE | NO_BILL_CAP | abc@gmail.com | Mr    | Dev       | Nadh     | 9052557770 | Single         | 500049  |
+  	| Samsung | GBP_20       | GBP_50       | VODAFONE | NO_BILL_CAP | abc@gmail.com | Mr    | Dev       | Nadh     | 9100826115 | Single         | 500049  |
     
