@@ -19,12 +19,12 @@ Feature: Basket
     And clicks on Go to checkout
     And selects "<Monthly Cap>" monthly cap
     And clicks on Continue to checkout
-    And fills the details in About You section "<Email>" "<Title>" "<FirstName>" "<LastName>" "<Contact>" "<Marital Status>"
+    And fills the details in About You section "<Email>" "<Title>" "<FirstName>" "<LastName>" "<Contact>" "<DOB>" "<Marital Status>" "<Employment Status>"
     And sets pincode "<Pincode>"
     And clicks on Continue to delivery
     
   Examples:
-  	| Brand   | Upfront Cost | Monthly Cost | Network  | Monthly Cap | Email         | Title | FirstName | LastName | Contact    | Marital Status | Pincode |
-  	| Apple   | GBP_20       | GBP_100      | VODAFONE | NO_BILL_CAP | abc@gmail.com | Mr    | Dev       | Nadh     | 9052557770 | Single         | 500049  |
-  	| Samsung | GBP_20       | GBP_50       | VODAFONE | NO_BILL_CAP | abc@gmail.com | Mr    | Dev       | Nadh     | 9100826115 | Single         | 500049  |
+  	| Brand   | Upfront Cost | Monthly Cost | Network  | Monthly Cap | Email         | Title | FirstName | LastName | Contact    | DOB        | Marital Status | Employment Status | Pincode |
+  	| Apple   | GBP_20       | GBP_100      | VODAFONE | NO_BILL_CAP | abc@gmail.com | Mr    | Dev       | Nadh     | 9052557770 | 05-08-1989 | Single         | Self-employed     | 500049  |
+  	| Samsung | GBP_20       | GBP_50       | VODAFONE | NO_BILL_CAP | abc@gmail.com | Mr    | Dev       | Nadh     | 9100826115 | 05-08-1989 |Single         | Self-employed     | 500049  |
     

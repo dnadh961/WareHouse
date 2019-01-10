@@ -138,9 +138,10 @@ public class ValidateBasket {
 	    checkoutPage = basketPage.continueToCheckout();
 	}
 
-	@When("^fills the details in About You section \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\"$")
-	public void fills_the_details_in_About_You_section(String email, String title, String fName, String lName, String contact, String maritalStatus) {
-	    checkoutPage.fillAboutYou(email, title, fName, lName, contact, maritalStatus);
+	@When("^fills the details in About You section \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\" \"([^\"]*)\"$")
+	public void fills_the_details_in_About_You_section(String email, String title, String fName, String lName, String contact,
+			String dob, String maritalStatus, String employmentStatus) {
+	    checkoutPage.fillAboutYou(email, title, fName, lName, contact, dob, maritalStatus, employmentStatus);
 	}
 
 	@When("^sets pincode \"([^\"]*)\"$")
