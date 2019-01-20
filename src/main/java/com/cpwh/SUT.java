@@ -20,6 +20,7 @@ public class SUT{
 		initializeDriver();
 	}
 
+	//useful for suppressing warnings (yellow background lines)
 	@SuppressWarnings("deprecation")
 	private void initializeDriver() {
 		String browserName = getConfiguration().getBrowserName();

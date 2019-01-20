@@ -30,6 +30,11 @@ public class BasketPage extends BasePage{
 		findElement(By.id("billCappingbtnTop")).click();
 	}
 	
+	//return item info for given index. 1 for first item/ 2 for second
+	public ItemInfo getItem(int index) {
+		return new ItemInfo();
+	}
+	
 	public void selectMonthlyCap(MonthlyCap cap) {
 		WebElement elmt = findElement(By.id("customerTitle"));
 		Select monthlyCapSlct = new Select(elmt);

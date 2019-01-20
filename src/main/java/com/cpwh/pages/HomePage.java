@@ -42,8 +42,11 @@ public class HomePage extends BasePage{
 	public PhonesPage openPhonesPage(String link){
 		PhonesPage phonesPage = null;
 		findElement(By.linkText(link)).click();
+		//else statements to handle remaining phones pages
 		if(link.contains("All pay monthly phones")){
 			phonesPage = new PayMonthly(sut);
+		} else if(link.contains("All pay as you go")) {
+			phonesPage = new PayAsYouGo(sut);
 		}
 		return phonesPage;
 	}

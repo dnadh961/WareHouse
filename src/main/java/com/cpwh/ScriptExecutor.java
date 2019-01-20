@@ -20,8 +20,7 @@ public class ScriptExecutor {
 		jsExecutor = (JavascriptExecutor)driver;
 	}
 	
-	public void click(WebElement elmt){
-		
+	public void click(WebElement elmt){		
 		click(elmt, true);
 	}
 	

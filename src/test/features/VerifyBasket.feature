@@ -1,9 +1,12 @@
-@basket
+@basket @smoke
 Feature: Basket
+
+	Background: 
+		#Given User opens warehouse home page
 
   @TC-100
   Scenario Outline: Validate items added to basket
-    Given User opens warehouse home page
+  	Given User opens warehouse home page
     When user clicks on "Shop" menu
     And opens a phones page "All pay monthly phones"
     And selects a brand "<Brand>"
@@ -25,6 +28,6 @@ Feature: Basket
     
   Examples:
   	| Brand   | Upfront Cost | Monthly Cost | Network  | Monthly Cap | Email         | Title | FirstName | LastName | Contact    | DOB        | Marital Status | Employment Status | Pincode |
-  	| Apple   | GBP_20       | GBP_100      | VODAFONE | NO_BILL_CAP | abc@gmail.com | Mr    | Dev       | Nadh     | 9052557770 | 05-08-1989 | Single         | Self-employed     | 500049  |
-  	| Samsung | GBP_20       | GBP_50       | VODAFONE | NO_BILL_CAP | abc@gmail.com | Mr    | Dev       | Nadh     | 9100826115 | 05-08-1989 |Single         | Self-employed     | 500049  |
-    
+  	| Appl   | GBP_20       | GBP_100      | VODAFONE | NO_BILL_CAP | abc@gmail.com | Mr    | Dev       | Nadh     | 9052557770 | 05-08-1989 | Single         | Self-employed     | 500049  |
+  	| Samsung | GBP_20       | GBP_50       | VODAFONE | NO_BILL_CAP | abc@gmail.com | Mr    | Dev       | Nadh     | 9100826115 | 05-08-1989 | Single         | Self-employed     | 500049  |
+    #| Sony    | GBP_20       | GBP_50       | VODAFONE | NO_BILL_CAP | abc@gmail.com | Mr    | Dev       | Nadh     | 9100826115 | 05-08-1989 | Single         | Self-employed     | 500049  |

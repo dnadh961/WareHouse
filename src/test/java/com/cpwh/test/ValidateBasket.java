@@ -149,7 +149,7 @@ public class ValidateBasket {
 	    checkoutPage.setPinCode(pincode);
 	}
 
-	@Given("^clicks on Continue to delivery$")
+	@When("^clicks on Continue to delivery$")
 	public void clicks_on_Continue_to_delivery() {
 	    checkoutPage.continueToDelivery();
 	}

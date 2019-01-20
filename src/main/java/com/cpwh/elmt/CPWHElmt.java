@@ -50,6 +50,7 @@ public class CPWHElmt implements WebElement{
 			waitHandler.waitForPageLoaded();
 			waitHandler.waitForLoadingMask();
 		}
+		//code to handle unexpected dialog
 		closeDialog();
 	}
 	
